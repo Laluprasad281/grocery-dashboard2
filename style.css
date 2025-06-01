@@ -89,7 +89,7 @@
   max-height: 300px;
   overflow-y: auto;
   border: 1px solid #ccc;
-  border-radius: 8px;
+  border-radius: 78px;
 }
 
 table {
@@ -110,49 +110,6 @@ thead th {
   z-index: 1;
 }
 
-
-table {
-  width: 100%;
-  border-collapse: collapse;
-}
-
-th, td {
-  padding: 8px;
-  border-bottom: 1px solid #ddd;
-  text-align: center;
-}
-
-thead th {
-  position: sticky;
-  top: 0;
-  background-color: #f8f8f8;
-  z-index: 1;
-}
-
-    
-
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      min-width: 600px;
-    }
-
-    thead {
-      background: #ecf0f1;
-      color: #2c3e50;
-      font-weight: 700;
-    }
-
-    th, td {
-      padding: 14px 18px;
-      text-align: left;
-      border-bottom: 1px solid #ddd;
-      vertical-align: middle;
-    }
-
-    tbody tr:hover {
-      background-color: #f1f7ff;
-    }
 
     /* Action buttons */
     .btn {
