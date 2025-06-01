@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Grocery Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1>Grocery Entry Dashboard</h1>
+  <div class="container">
+    <form id="entry-form" onsubmit="event.preventDefault(); addEntry();">
+      <div>
+        <label for="date">Date</label>
+        <input id="date" type="date" required />
+      </div>
+
+      <div>
+        <label for="item">Category</label>
+        <select id="item" required>
+          <option value="" disabled selected>Select Category</option>
+          <option>Grocery</option>
+          <option>Vegetables</option>
+          <option>Fruits</option>
+          <option>Fish</option>
+          <option>Egg</option>
+          <option>Chicken</option>
+          <option>Paneer</option>
+          <option>Mushroom</option>
+          <option>Other</option>
+        </select>
+      </div>
+
+      <div>
+        <label for="price">Price (₹)</label>
+        <input id="price" type="number" min="0" step="0.01" placeholder="0.00" required />
+      </div>
+
+      <div>
+        <label for="buyer">Buyer</label>
+        <select id="buyer" required>
+          <option value="" disabled selected>Select Buyer</option>
+          <option>Satya</option>
+          <option>Litun</option>
+          <option>Bhupati</option>
+          <option>Surya</option>
+        </select>
+      </div>
+
+      <div style="align-self: end;">
+        <button id="add-btn" type="submit">Add Entry</button>
+      </div>
+    </form>
+
+    <div id="total">Total: ₹0.00</div>
+
+    <div class="table-wrapper" style="margin-top: 20px;">
+      <table aria-label="Grocery entries">
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Category</th>
+            <th>Price (₹)</th>
+            <th>Buyer</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody id="table-body"></tbody>
+      </table>
+    </div>
+
+    <div id="summary"></div>
+
+    <div class="bottom-buttons">
+      <button onclick="downloadFullCSV()">Download Full Data CSV</button>
+      <button class="reset-btn" onclick="resetData()">Reset All Data</button>
+    </div>
+  </div>
+<script src="script.js"></script>
+</body>
+</html>
