@@ -86,10 +86,31 @@
 
     /* Table */
     .table-wrapper {
-      overflow-x: auto;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.06);
-    }
+  max-height: 300px;
+  overflow-y: auto;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 8px;
+  border-bottom: 1px solid #ddd;
+  text-align: center;
+}
+
+thead th {
+  position: sticky;
+  top: 0;
+  background-color: #f8f8f8;
+  z-index: 1;
+}
+
+    
 
     table {
       width: 100%;
