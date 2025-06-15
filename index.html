@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Grocery Dashboard</title>
   <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
 
@@ -74,11 +75,17 @@
 
     <div id="summary"></div>
 
+    <!-- Pie Chart -->
+    <div style="max-width: 500px; margin: 30px auto;">
+      <canvas id="categoryPieChart"></canvas>
+    </div>
+
     <div class="bottom-buttons">
       <button onclick="downloadFullCSV()">Download Full Data CSV</button>
       <button class="reset-btn" onclick="resetData()">Reset All Data</button>
     </div>
   </div>
+
 <script src="script.js"></script>
 </body>
 </html>
